@@ -1,0 +1,21 @@
+[package]
+name = "vite-yew-starter"
+version = "0.1.0"
+authors = ["zuramai"]
+edition = "2022"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.82"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
