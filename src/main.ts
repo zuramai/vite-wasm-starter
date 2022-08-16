@@ -1,6 +1,9 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import { setupCounter } from './counter'
+import hello from "../crates/hello/pkg/hello"
+
+let initHello = await hello()
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

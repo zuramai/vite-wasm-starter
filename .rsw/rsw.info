@@ -1,0 +1,3 @@
+[RSW::ERR]
+[RSW::NAME] :~> crates/hello
+[RSW::BUILD] :~> wasm-pack build crates/hello --out-dir pkg --target web --dev

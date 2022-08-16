@@ -1,0 +1,8 @@
+Error: Error during execution of `cargo metadata`: error: failed to parse manifest at `/var/programming/Rust/vite-yew-starter/crates/hello/Cargo.toml`
+
+Caused by:
+  failed to parse the `edition` key
+
+Caused by:
+  this version of Cargo is older than the `2022` edition, and only supports `2015`, `2018`, and `2021` editions.
+
