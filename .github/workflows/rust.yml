@@ -1,0 +1,32 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - uses: pnpm/action-setup@v2.2.2
+      with:
+        run_install: true
+    - uses: jetli/wasm-pack-action@v0.3.0
+    - name: Install dependencies
+      run: pnpm install
+    - name: Install rsw
+      run: cargo install rsw
+    - name: Build
+      run: yarn build
+    - name: Deploy to gh-pages
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: gh-pages 
+        folder: ./dist 
