@@ -23,7 +23,7 @@ jobs:
     - name: Install rsw
       run: cargo install rsw
     - name: Build
-      run: pnpm install -g && pnpm install -g pnpm && pnpm build
+      run: pnpm build
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:

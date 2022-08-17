@@ -1,5 +1,5 @@
 import './style.css'
-import init, { use_counter } from "hello"
+import init, { use_counter } from "../crates/hello/pkg"
 
 
 const run = async () => {
