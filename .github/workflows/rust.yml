@@ -17,6 +17,7 @@ jobs:
     - uses: actions/setup-node@v3
     - uses: pnpm/action-setup@v2.2.2
       with:
+        version: 7.9.1
         run_install: true
     - uses: jetli/wasm-pack-action@v0.3.0
     - name: Install dependencies
