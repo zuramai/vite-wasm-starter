@@ -17,15 +17,13 @@ jobs:
     - uses: actions/setup-node@v3
     - uses: pnpm/action-setup@v2.2.2
       with:
-        version: 7.9.1
+        version: 7.9.0
         run_install: true
     - uses: jetli/wasm-pack-action@v0.3.0
-    - name: Install dependencies
-      run: pnpm install
     - name: Install rsw
       run: cargo install rsw
     - name: Build
-      run: yarn build
+      run: pnpm install -g && pnpm install -g pnpm && pnpm build
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
