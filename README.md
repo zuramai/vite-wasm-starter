@@ -26,7 +26,7 @@ cd vite-wasm-starter
 
 #### 2. Install dependencies
 ```sh
-pnpm install
+pnpm install # OR npm install
 ```
 
 #### 3. Run the application
